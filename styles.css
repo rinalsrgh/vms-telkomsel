@@ -1,0 +1,839 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Latar belakang netral */
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.admin-login-button, .security-login-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
+
+.admin-login-button:hover, .security-login-button:hover {
+    background-color: #e60000;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.top-footer {
+    width: 100%;
+    background-color: #fff; /* Latar belakang putih untuk header */
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 50px; /* Jarak dari kiri */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 190px; /* Ukuran logo lebih kecil */
+    height: auto;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.2); /* Perbesar logo saat hover */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #e60000;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto; /* Memberi jarak dari atas agar tidak tertutup header */
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #ff0000; /* Border merah */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container h2 {
+    text-align: center;
+    color: #ff0000; /* Warna teks merah */
+    margin-bottom: 20px;
+}
+
+.container label {
+    display: block;
+    margin-top: 20px;
+    color: #555;
+}
+
+.container input[type="text"],
+.container input[type="building"],
+.container input[type="email"],
+.container input[type="tel"],
+.container input[type="date"],
+.container input[type="time"],
+.container input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.container input[type="text"]:focus,
+.container input[type="email"]:focus,
+.container input[type="tel"]:focus,
+.container input[type="date"]:focus,
+.container input[type="time"]:focus {
+    border-color: #ff0000; /* Warna border fokus merah */
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+
+.container input[type="submit"] {
+    background-color: #ff0000; /* Warna tombol merah */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #e60000; /* Warna tombol saat hover lebih gelap */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.success-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+.success-container h2 {
+    color: #03b609;
+    margin-bottom: 20px;
+}
+
+.success-container p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.success-container .qr-code img {
+    width: 350px; /* Ukuran QR code lebih besar */
+    height: auto;
+    margin: 20px 0;
+}
+
+.success-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ff08;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.success-container a:hover {
+    background-color: #009e00;
+}
+
+.error-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+.error-container h2 {
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+
+.error-container p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.error-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.error-container a:hover {
+    background-color: #c82333;
+}
+
+/* USER DASHBOARD */
+.user-dashboard {
+    margin-left: 0px; /* To make room for the sidebar */
+    padding: 20px;
+}
+
+.button-user {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button-user:hover, 
+.button-user:active {
+    background-color: #cc0000; /* Warna agak kehitaman */
+}
+
+/* SIDEBAR */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.top-footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.top-footer .logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.main-sidebar {
+    width: 250px;
+    background-color: #222;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.sidebar {
+    padding: 20px;
+}
+
+.user-panel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-panel .image {
+    margin-right: 10px;
+}
+
+.user-panel .img-circle {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.user-panel .info {
+    color: #fff;
+}
+
+.user-panel .info p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.sidebar-form {
+    margin-bottom: 20px;
+}
+
+.sidebar-form .form-control {
+    border-radius: 0;
+}
+
+.sidebar-form .btn {
+    border-radius: 0;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu .header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sidebar-menu li {
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-menu li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.sidebar-menu li.logout-item a {
+    background-color: #ff4d4d !important; /* Ganti dengan warna yang Anda inginkan */
+    color: #fff !important; /* Warna teks */
+}
+
+.sidebar-menu li.logout-item a:hover {
+    background-color: #e60000 !important; /* Ganti dengan warna yang Anda inginkan */
+}
+
+
+
+.sidebar-menu li a:hover,
+.sidebar-menu li.active a {
+    background-color: #575757;
+}
+
+.table-container {
+    margin-left: 260px; /* To make room for the sidebar */
+    padding: 20px;
+}
+
+.table-container h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Footer CSS */
+.footer {
+    width: 100%;
+    background-color: #ffffff; /* Warna latar belakang biru tua */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    box-sizing: border-box;
+    margin-top: auto;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.footer .left, .footer .right {
+    display: flex;
+    align-items: center;
+}
+
+.footer .left {
+    flex: 1;
+}
+
+.footer .right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* Media Query untuk tampilan responsif */
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer div {
+        padding: 5px 0;
+    }
+
+    .footer a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* CSS Admin Dashboard */
+
+.admin-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-x: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.admin-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-container .edit, .table-container .delete {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.table-container .edit {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.table-container .edit:hover {
+    background-color: #e6b800;
+}
+
+.table-container .delete {
+    background-color: #dc3545;
+}
+
+.table-container .delete:hover {
+    background-color: #c82333;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+}
+
+.button:hover {
+    background-color: #e60000;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+form table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+form table td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+form table td label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form table td input[type="text"],
+form table td input[type="email"],
+form table td input[type="tel"],
+form table td input[type="date"],
+form table td input[type="time"] {
+    width: calc(100% - 22px); /* Mengurangi padding untuk input */
+    padding: 10px; /* Menambahkan padding */
+    margin: 5px 0; /* Menambahkan margin */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Border radius */
+    box-sizing: border-box; /* Box sizing */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transisi */
+}
+
+form table td input[type="text"]:focus,
+form table td input[type="email"]:focus,
+form table td input[type="tel"]:focus,
+form table td input[type="date"]:focus,
+form table td input[type="time"]:focus {
+    border-color: #ff0000; /* Warna border fokus merah */
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+
+form table td input[type="submit"] {
+    width: auto;
+    margin-top: 20px;
+    background-color: #ff0000; /* Warna tombol merah */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+form table td input[type="submit"]:hover {
+    background-color: #e60000; /* Warna tombol saat hover lebih gelap */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Mengatur kotak statistik dashboard admin agar sejajar */
+.visitor-stats {
+    display: flex;
+    justify-content: flex-end; /* Menggeser kotak-kotak ke kanan */
+    margin: 20px 0;
+    padding-right: 35px; /* Mengatur jarak agar sejajar dengan tabel */
+}
+
+.stat-box {
+    background-color: #333; /* Warna latar belakang merah */
+    padding: 36px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    width: 216px; /* Lebar tetap */
+    margin-left: 20px; /* Mengatur jarak antar kotak */
+    color: #ffffff; /* Warna font putih */
+}
+
+.stat-box a {
+    color: #ffffff; /* Warna font putih untuk tautan */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+
+.stat-box a:hover {
+    color: #cccccc; /* Warna font ketika tautan di-hover */
+}
+
+/* Gaya donwload pdf */
+.download-pdf {
+    background-color: red;
+    color: white; /* Optional: to make the text more readable on the red background */
+    padding: 10px 20px; /* Optional: to add some padding around the text */
+    text-decoration: none; /* Optional: to remove underline from the link */
+    border-radius: 5px; /* Optional: to round the corners of the button */
+}
+
+.download-pdf:hover {
+    background-color: darkred; /* Warna latar belakang yang lebih gelap saat hover */
+}
+
+/* edit delete button */
+.edit-button {
+    background-color: #4CAF50; /* Hijau */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px; /* Membuat sudut bulat */
+    transition: background-color 0.2s; /* Transisi untuk perubahan warna */
+}
+
+.edit-button:active {
+    background-color: #45a049; /* Warna hijau yang sedikit lebih gelap saat diklik */
+}
+
+.delete-button {
+    background-color: #f44336; /* Merah */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px; /* Membuat sudut bulat */
+    transition: background-color 0.2s; /* Transisi untuk perubahan warna */
+}
+
+.delete-button:active {
+    background-color: #d32f2f; /* Warna merah yang sedikit lebih gelap saat diklik */
+}
+
+.set-button {
+    background-color: #115ad7; /* Hijau */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px; /* Membuat sudut bulat */
+    transition: background-color 0.2s; /* Transisi untuk perubahan warna */
+}
+
+/* Gaya umum untuk status */
+.status {
+    display: inline-flex; /* Gunakan flexbox untuk penyelarasan */
+    align-items: center; /* Penyelarasan vertikal di tengah */
+    justify-content: center; /* Penyelarasan horizontal di tengah */
+    padding: 4px 10px; /* Padding yang pas */
+    border-radius: 5px; /* Sudut melengkung lembut */
+    font-size: 0.85em; /* Ukuran font yang sesuai */
+    font-weight: 600; /* Font sedikit lebih tebal */
+    text-transform: capitalize; /* Menyelaraskan teks dengan kapitalisasi */
+    color: #fff; /* Warna teks putih */
+    min-width: 80px; /* Lebar minimum untuk tampilan yang lebih konsisten */
+    text-align: center; /* Pusatkan teks */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Bayangan lembut untuk tampilan lebih baik */
+}
+
+/* Status Waiting */
+.status-waiting {
+    background-color: #f1c40f; /* Kuning lembut */
+    color: #333; /* Warna teks kontras */
+}
+
+/* Status Confirmed */
+.status-confirmed {
+    background-color: #2ecc71; /* Hijau segar */
+    color: #fff; /* Warna teks putih untuk kontras */
+}
+
+/* Styling untuk kontainer form */
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Styling untuk judul halaman */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styling untuk label */
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Styling untuk input field */
+.form-container input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* Styling untuk tombol submit */
+.form-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Styling untuk tombol submit saat di-hover */
+.form-container button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
